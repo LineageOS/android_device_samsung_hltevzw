@@ -1,8 +1,8 @@
 LOCAL_PATH := $(call my-dir)
 
 DTBTOOL := device/samsung/hltevzw/mkbootimg_dtb
-KERNEL := device/samsung/hltevzw/kernAl
-DTB := device/samsung/hltevzw/dtb
+KERNEL := device/samsung/hltevzw/kernel
+DTB := device/samsung/hltevzw/dtb.img
 
 INSTALLED_RECOVERYIMAGE_TARGET := $(PRODUCT_OUT)/recovery.img
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \

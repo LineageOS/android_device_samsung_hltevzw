@@ -74,7 +74,6 @@ TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,noauto_da_alloc,discard,journal_async_commit,errors=panic"
 TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_KEY_LOC := "footer"
-TW_NO_EXFAT_FUSE := true
 TW_NO_RTC := true
 
 TARGET_OTA_ASSERT_DEVICE := hltevzw,SM-N900V

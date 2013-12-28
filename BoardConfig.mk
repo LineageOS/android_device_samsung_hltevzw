@@ -23,5 +23,4 @@ TARGET_OTA_ASSERT_DEVICE := hltevzw,SM-N900V
 
 # Kernel source and configs
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hltevzw_defconfig
-TARGET_KERNEL_TIMA_CONFIG := tima_defconfig
 

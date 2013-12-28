@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The CyanogenMod Project
+# Copyright (C) 2011 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,19 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product-if-exists, vendor/samsung/hltevzw/hltevzw-vendor.mk)
+LOCAL_PATH := $(call my-dir)
 
-# NFC
-TARGET_NFC_TECH := nxp
-PRODUCT_PACKAGES += nfc.MSM8974
+include $(CLEAR_VARS)
 
-# Device Overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/hltevzw/overlay
+LOCAL_MODULE := nfc.MSM8974
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
+LOCAL_SRC_FILES := nfc_hw.c
+LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_MODULE_TAGS := optional
+LOCAL_CFLAGS += -D$(TARGET_DEVICE)
 
-# common overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/hlte-common/overlay-cdma
-
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
-
-# Inherit from hlte-common
-$(call inherit-product, device/samsung/hlte-common/hlte-common.mk)
+include $(BUILD_SHARED_LIBRARY)

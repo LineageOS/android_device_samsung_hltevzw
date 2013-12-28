@@ -1,24 +1,16 @@
 #system prop for hltevzw
-rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/smd0
-ril.subscription.types=NV,RUIM
 # Start in cdma mode
 ro.telephony.default_network=5
 # Use CDMALTE Phone
 telephony.lteOnCdmaDevice=1
-# Keep SIM state on LPM mode
-persist.radio.apm_sim_not_pwdn=1
 # Don't wait the card state for RADIO POWER request
 persist.radio.no_wait_for_card=1
-# For sys info indication
-persist.radio.add_power_save=1
 # Snapshot Setting
 persist.radio.snapshot_enabled=1
 persist.radio.snapshot_timer=22
 # Control EONS (true = EONS enabled, false = EONS disabled)
 persist.eons.enabled=false
-# Use CP SE13 Table
-persist.radio.use_se_table_only=1
 # Support Global Mode (Global Mode project)
 ro.config.multimode_cdma=1
 # Use data service state for signal display (Except USC CS devices)

@@ -14,10 +14,8 @@
 
 $(call inherit-product-if-exists, vendor/samsung/hltevzw/hltevzw-vendor.mk)
 
-# Media config
-PRODUCT_COPY_FILES += \
-    device/samsung/hltevzw/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/samsung/hltevzw/configs/media_profiles.xml:system/etc/media_profiles.xml \
+# NFC setting
+TARGET_NFC_TECH := nxp
 
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hltevzw/overlay

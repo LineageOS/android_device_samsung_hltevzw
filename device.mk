@@ -1,25 +1,31 @@
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+# Copyright (C) 2013 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 $(call inherit-product-if-exists, vendor/samsung/hltevzw/hltevzw-vendor.mk)
 
+# Media config
+PRODUCT_COPY_FILES += \
+    device/samsung/hltevzw/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/samsung/hltevzw/configs/media_profiles.xml:system/etc/media_profiles.xml \
+
+# Device Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hltevzw/overlay
 
-LOCAL_PATH := device/samsung/hltevzw
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+# common overlays
+DEVICE_PACKAGE_OVERLAYS += device/samsung/hltexx/overlay-gsm
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/libkeyutils.so:recovery/root/sbin/libkeyutils.so \
-    $(LOCAL_PATH)/recovery/libsec_ecryptfs.so:recovery/root/sbin/libsec_ecryptfs.so \
-    $(LOCAL_PATH)/recovery/libsec_km.so:recovery/root/sbin/libsec_km.so \
-
-
+# Inherit from hltexx-common
+$(call inherit-product, device/samsung/hltexx/hltexx-common.mk)

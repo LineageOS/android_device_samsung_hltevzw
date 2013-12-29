@@ -24,7 +24,5 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/hltevzw/overlay
 # common overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hlte-common/overlay-cdma
 
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
-
 # Inherit from hlte-common
 $(call inherit-product, device/samsung/hlte-common/hlte-common.mk)

@@ -1,33 +1,22 @@
-#system prop for hltevzw
+# system.prop for SCH-I545
+#
+## cannot take spaces
 rild.libargs=-d /dev/smd0
-# Start in cdma mode
-ro.telephony.default_network=5
-# Use CDMALTE Phone
+
+ro.cdma.home.operator.numeric=311480
+ro.cdma.home.operator.alpha=Verizon
+ro.gps.set_privacy=1
+ro.telephony.default_network=10
 telephony.lteOnCdmaDevice=1
-# Don't wait the card state for RADIO POWER request
-persist.radio.no_wait_for_card=1
-# Snapshot Setting
+
+# Moar ril props
 persist.radio.snapshot_enabled=1
 persist.radio.snapshot_timer=22
-# Control EONS (true = EONS enabled, false = EONS disabled)
-persist.eons.enabled=false
-# Support Global Mode (Global Mode project)
 ro.config.multimode_cdma=1
-# Use data service state for signal display (Except USC CS devices)
 ro.config.combined_signal=true
-# Restore delay of the default network - 30 mins (VZW)
-android.telephony.apn-restore=1800000
-# Restore delay of VZW Apps APN - 1 min (VZW)
-vzw.telephony.appsapn-restore=60000
-# Retry Timer (VZW)
 ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000
-persist.radio.apn_delay=5000
-# VoLTE/IMS
-persist.radio.jbims=1
-# MISC
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
-ro.qc.sdk.izat.premium_enabled=0
-ro.qc.sdk.izat.service_mask=0x4
-persist.gps.qc_nlp_in_use=0
+DEVICE_PROVISIONED=1
+persist.eons.enabled=false
 
+# Set default cdma subscription to RUIM in database
+ro.telephony.default_cdma_sub=0

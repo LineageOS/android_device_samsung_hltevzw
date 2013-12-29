@@ -19,7 +19,7 @@
 -include vendor/samsung/hltevzw/BoardConfigVendor.mk
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := hltevzw,SM-N900V
+TARGET_OTA_ASSERT_DEVICE := hltevzw,SM-N900V,hltetmo,SM-N900T
 
 # Kernel source and configs
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hltevzw_defconfig

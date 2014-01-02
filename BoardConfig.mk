@@ -21,6 +21,9 @@
 # Assert
 TARGET_OTA_ASSERT_DEVICE := hltevzw,SM-N900V,hltetmo,SM-N900T
 
+# NFC
+TARGET_NFC_TECH := nxp
+
 # Kernel source and configs
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_hltevzw_defconfig
 

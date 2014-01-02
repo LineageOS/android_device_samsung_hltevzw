@@ -18,6 +18,9 @@ $(call inherit-product-if-exists, vendor/samsung/hltevzw/hltevzw-vendor.mk)
 TARGET_NFC_TECH := nxp
 PRODUCT_PACKAGES += nfc.MSM8974
 
+# Tiny ALSA bins
+PRODUCT_PACKAGES += tinymix tinyplay tinycap
+
 # Device Overlays
 DEVICE_PACKAGE_OVERLAYS += device/samsung/hltevzw/overlay
 

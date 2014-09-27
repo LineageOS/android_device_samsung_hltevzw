@@ -17,6 +17,9 @@
 
 TARGET_OTA_ASSERT_DEVICE := SM-N900V,hltevzw
 
+# NFC
+BOARD_NFC_CHIPSET := pn547
+
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/hltevzw/init/init_hlte.c

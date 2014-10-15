@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a1b2928_2c364e52",
+        "filename": "BoardConfig.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 2936
+      },
+      "writtenOn": "2014-10-15T11:32:48Z",
+      "side": 1,
+      "message": "This section should probably go between Init and Partitions.",
+      "revId": "3c0bcb42500f114176f7e579000894bef1dc08bb",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
